@@ -4,6 +4,7 @@ import { getCompanion } from '@/lib/actions/companion.action';
 import { redirect } from 'next/navigation';
 import { getSubjectColor } from '@/lib/utils';
 import Image from 'next/image';
+import CompanionComponent from '@/components/CompanionComponent';
 
 interface CompanionSessionPageProps {
 
@@ -13,7 +14,8 @@ interface CompanionSessionPageProps {
 const CompanionSession = async ({params}: CompanionSessionPageProps) => {
 
   const {id} = await params;
-  const {name, subject, title, topic, duration} = await getCompanion(id);
+  const companion = await getCompanion(id);
+  const {name, subject, title, topic, duration} = companion;
   const user = await currentUser();
 
   if(!user) redirect('/sign-in');
@@ -42,6 +44,13 @@ const CompanionSession = async ({params}: CompanionSessionPageProps) => {
             {duration} minutes
           </div>
         </article>
+        <CompanionComponent
+
+          {...companion}
+          companionId={id}
+          userName={user.firstName!}
+          userImage={user.imageUrl!}
+        />
 
     </main>
   )
