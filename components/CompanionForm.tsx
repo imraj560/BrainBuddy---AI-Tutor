@@ -25,6 +25,8 @@ import { subjects } from '@/constants'
 import { Textarea } from './ui/textarea'
 import { createCompanion } from '@/lib/actions/companion.action'
 import { redirect } from 'next/navigation'
+import { toast } from 'react-toastify';
+
 
 
 
@@ -72,6 +74,7 @@ const CompanionForm = () => {
       if(companion){
 
         redirect(`/companions/${companion.id}`);
+        toast.success('Companion Created');
 
       }else{
 

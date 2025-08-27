@@ -3,6 +3,8 @@ import { Bricolage_Grotesque } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ToastContainer } from 'react-toastify';
+
 
 export const dynamic = "force-dynamic";
 
@@ -25,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${bricolage.variable} antialiased`}>
         <ClerkProvider appearance={{variables: {colorPrimary: '#fe5933'}}}>
+          <ToastContainer/>
           <Navbar/>
         {children}
         </ClerkProvider>

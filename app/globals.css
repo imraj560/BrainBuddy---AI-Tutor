@@ -139,8 +139,11 @@ body {
 }
 
 @layer components {
+  .banner{
+    @apply flex bg-[url(/images/banner.jpg)] bg-cover bg-center h-[400px] w-full rounded-4xl items-center text-white pl-[30px];
+  }
   .home-section {
-    @apply flex gap-4 justify-between items-start w-full max-lg:flex-col-reverse max-lg:items-center;
+    @apply flex gap-4 justify-between items-start w-full h-[200px] max-lg:flex-col-reverse max-lg:items-center;
   }
   .companions-grid {
     @apply flex flex-wrap gap-4 w-full max-md:justify-center;

@@ -12,8 +12,8 @@ import {
 
 const Navbar = () => {
   return (
-    
-        <nav className='navbar'>
+        <main>
+          <nav className='navbar rounded-4xl border-2 mt-1'>
             <Link href="/">
                 <div className='flex items-center gap-2.5 cursor-pointer'>
                     <h1>Brain Buddy</h1>
@@ -36,6 +36,8 @@ const Navbar = () => {
 
             </div>
         </nav>
+        </main>
+        
 
   )
 }

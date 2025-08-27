@@ -17,7 +17,10 @@ export const createCompanion = async (formData: CreateCompanion) => {
 }
 
 export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }: GetAllCompanions) => {
+
     const supabase = createSupabaseClient();
+
+    const { userId } = await auth();
 
     let query = supabase.from('companions').select();
 
@@ -35,6 +38,23 @@ export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }:
     const { data: companions, error } = await query;
 
     if(error) throw new Error(error.message);
+
+     const companionIds = companions.map(({ id }) => id);
+
+  // Get the bookmarks where user_id is the current user and companion_id is in the array of companion IDs
+  const { data: bookmarks } = await supabase
+    .from("bookmarks")
+    .select()
+    .eq("user_id", userId)
+    .in("companion_id", companionIds); // Notice the in() function used to filter the bookmarks by array
+
+  const marks = new Set(bookmarks?.map(({ companion_id }) => companion_id));
+
+  // Add a bookmarked property to each companion
+  companions.forEach((companion) => {
+    companion.bookmarked = marks.has(companion.id);
+  });
+
 
     return companions;
 }
