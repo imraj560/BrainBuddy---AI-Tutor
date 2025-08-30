@@ -38,9 +38,9 @@ const Page = async() => {
 
       <section className='flex gap-2 justify-between w-[70%] h-auto mx-auto max-lg:flex-col max-lg:gap-y-36'>
 
-        <div className='flex flex-col items-center'><FaCoffee size={50}/> <p className='text-xl mt-3'>Coffee</p></div>
-        <div className='flex flex-col items-center'><RiUserVoiceFill size={50} /><p className='text-xl mt-3'>Voice Interaction</p></div>
-       <div className='flex flex-col items-center'><FaUserGraduate size={50} /><p className='text-xl mt-3'>Learn</p></div>
+        <div className='flex flex-col items-center'><FaCoffee size={45}/> <p className='text-xl mt-3'>Coffee</p></div>
+        <div className='flex flex-col items-center'><RiUserVoiceFill size={45} /><p className='text-xl mt-3'>Voice Interaction</p></div>
+       <div className='flex flex-col items-center'><FaUserGraduate size={45} /><p className='text-xl mt-3'>Learn</p></div>
 
       </section>
 

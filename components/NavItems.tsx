@@ -3,12 +3,14 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils';
+import { CgProfile } from "react-icons/cg";
+import { FaChalkboardTeacher } from "react-icons/fa";
 
 const navItems = [
 
     {label:'Home', href:'/'},
-    {label:'Companions', href:'/companions'},
-    {label:'Profile', href:'/my-journey'}
+    {label:<FaChalkboardTeacher size={23}/>, href:'/companions'},
+    {label:<CgProfile size={23}/>, href:'/my-journey'}
 ]
 
 const NavItems = () => {
