@@ -16,7 +16,7 @@ const Navbar = () => {
           <nav className='navbar rounded-4xl border-2 mt-1'>
             <Link href="/">
                 <div className='flex items-center gap-2.5 cursor-pointer'>
-                    <h1>Brain Buddy</h1>
+                    <h1 className='max-sm:text-xl max-md:text-xl'>Brain Buddy</h1>
                 </div>
             </Link>
             <div className='flex items-center gap-8'>
@@ -24,7 +24,7 @@ const Navbar = () => {
                <SignedOut>
                 <div className='flex items-center gap-2'>
                     <SignInButton>
-                        <button className='btn-signin'>Sign In</button>
+                        <button className='btn-signin max-sm:text-[15px]'>Sign In</button>
                     </SignInButton>
                 </div>
                </SignedOut>
