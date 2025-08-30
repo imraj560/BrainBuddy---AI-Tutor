@@ -26,17 +26,17 @@ const Page = async() => {
   return (
     <main>
 
-      <div className='banner'>
+      <section className='banner'>
         <div>
             <p className='text-4xl max-sm:text-2xl'>Do you feel lazy while learning?</p>
             <p className='text-xl'>Perfect Soulution for You</p>
         </div>
       
-      </div>
+      </section>
 
       <h1 className='mt-6 mb-6 text-center'>How?</h1>
 
-      <section className='flex gap-2 justify-between w-[70%] mx-auto'>
+      <section className='flex gap-2 justify-between w-[70%] h-auto mx-auto max-lg:flex-col max-lg:gap-y-36'>
 
         <div className='flex flex-col items-center'><FaCoffee size={50}/> <p className='text-xl mt-3'>Coffee</p></div>
         <div className='flex flex-col items-center'><RiUserVoiceFill size={50} /><p className='text-xl mt-3'>Voice Interaction</p></div>
@@ -60,7 +60,7 @@ const Page = async() => {
 
          <h1 className='text-center mt-[120px] mb-[70px]'>Recent Sessions</h1>
 
-        <section className="home-section">
+        <section className="recent-section">
           <CompanionList
               title="Recently completed sessions"
               companions={recentSessionsCompanions}
@@ -69,17 +69,17 @@ const Page = async() => {
 
       </section>
 
-      <section className='flex max-sm:flex-col gap-4 justify-between h-[100px]'>
+      <section className='flex max-md:flex-col gap-4 justify-between h-auto mt-[90px] mb-[90px]'>
 
         <div>
              <h1>Sit back and Interact with Your Companion</h1>
              <p>Much easier than you think</p>
         </div>
-        <div>
+        <div className='max-md:mt-6'>
               <button className='btn-primary'>
                    <Image src="/icons/plus.svg" alt="plus" width={12} height={12} />
                     <Link href="/companions/new">
-                  <p>Build a new Companion</p>
+                  <p>Build Companion</p>
                 </Link>
          </button>      
         </div>
