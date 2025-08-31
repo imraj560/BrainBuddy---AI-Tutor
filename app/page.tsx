@@ -7,9 +7,10 @@ import { recentSessions } from '@/constants'
 import { getRecentSessions } from '@/lib/actions/companion.action'
 import { getAllCompanions } from '@/lib/actions/companion.action'
 import { getSubjectColor } from '@/lib/utils'
-import { FaCoffee } from 'react-icons/fa'
+import { GiCoffeeCup } from "react-icons/gi";
+import { GiUltrasound } from "react-icons/gi";
 import { RiUserVoiceFill } from 'react-icons/ri'
-import { FaUserGraduate } from 'react-icons/fa'
+import { PiStudentFill } from "react-icons/pi";
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -38,9 +39,9 @@ const Page = async() => {
 
       <section className='flex gap-2 justify-between w-[70%] h-auto mx-auto max-lg:flex-col max-lg:gap-y-36'>
 
-        <div className='flex flex-col items-center'><FaCoffee size={45}/> <p className='text-xl mt-3'>Coffee</p></div>
-        <div className='flex flex-col items-center'><RiUserVoiceFill size={45} /><p className='text-xl mt-3'>Voice Interaction</p></div>
-       <div className='flex flex-col items-center'><FaUserGraduate size={45} /><p className='text-xl mt-3'>Learn</p></div>
+        <div className='flex flex-col items-center'><GiCoffeeCup size={45}/> <p className='text-xl mt-3'>Coffee</p></div>
+        <div className='flex flex-col items-center'><GiUltrasound size={45} /><p className='text-xl mt-3'>Voice Interaction</p></div>
+       <div className='flex flex-col items-center'><PiStudentFill size={45} /><p className='text-xl mt-3'>Learn</p></div>
 
       </section>
 
@@ -69,7 +70,7 @@ const Page = async() => {
 
       </section>
 
-      <section className='flex max-md:flex-col gap-4 justify-between h-auto mt-[90px] mb-[90px]'>
+      <section className='bg-[#D7D9E0] p-6 rounded-3xl flex max-md:flex-col gap-4 justify-between h-auto mt-[90px] mb-[90px]'>
 
         <div>
              <h1>Sit back and Interact with Your Companion</h1>

@@ -6,6 +6,10 @@ import Link from "next/link";
 import { redirect, usePathname } from "next/navigation";
 import { toast } from 'react-toastify';
 import { useUser } from "@clerk/nextjs";
+import { FaUser} from "react-icons/fa";
+import { MdLockClock } from "react-icons/md";
+
+
 
 interface CompanionCardProps {
   id: string;
@@ -37,9 +41,7 @@ const CompanionCard = ({
     if (!isSignedIn) {
 
        redirect("/sign-in");
-
-      
-
+       
     }else{
 
        if (bookmarked) {
@@ -79,13 +81,8 @@ const CompanionCard = ({
       <h2 className="text-2xl font-bold">{name}</h2>
       <p className="text-sm">{topic}</p>
       <div className="flex items-center gap-2">
-        <Image
-          src="/icons/clock.svg"
-          alt="duration"
-          width={13.5}
-          height={13.5}
-        />
-        <p className="text-sm">{duration} minutes</p>
+      <MdLockClock size={20}/>
+        <p className="text-sm font-bold">{duration} minutes</p>
       </div>
 
       <Link href={`/companions/${id}`} className="w-full">
