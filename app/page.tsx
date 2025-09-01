@@ -19,7 +19,7 @@ import Link from 'next/link'
 
 const Page = async() => {
 
-  const companions = await getAllCompanions({limit:3});
+  const companions = await getAllCompanions({limit:6});
   const recentSessionsCompanions = await getRecentSessions(10);
 
  
