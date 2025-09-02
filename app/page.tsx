@@ -29,8 +29,8 @@ const Page = async() => {
 
       <section className='banner'>
         <div>
-            <p className='text-4xl max-sm:text-2xl'>Do you feel lazy while learning?</p>
-            <p className='text-xl'>Perfect Soulution for You</p>
+            <p className='text-4xl max-sm:text-2xl text-black'>Do you feel lazy while learning?</p>
+            <p className='text-xl text-black'>Perfect Soulution for You</p>
         </div>
       
       </section>
@@ -70,7 +70,7 @@ const Page = async() => {
 
       </section>
 
-      <section className='bg-[#D7D9E0] p-6 rounded-3xl flex max-md:flex-col gap-4 justify-between h-auto mt-[90px] mb-[90px]'>
+      <section className='bg-white border-2 p-6 rounded-3xl flex max-md:flex-col gap-4 justify-between h-auto mt-[90px] mb-[90px]'>
 
         <div>
              <h1>Sit back and Interact with Your Companion</h1>
