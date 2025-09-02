@@ -63,9 +63,9 @@ const CompanionCard = ({
   };
 
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article className="companion-card transition-transform duration-300 hover:scale-110 cursor-pointer" style={{ backgroundColor: "white" }}>
       <div className="flex justify-between items-center">
-        <div className="subject-badge">{subject}</div>
+        <div className="subject-badge" style={{backgroundColor: color}}>{subject}</div>
         <button className="companion-bookmark" onClick={handleBookmark}>
           <Image
             src={
@@ -86,8 +86,8 @@ const CompanionCard = ({
       </div>
 
       <Link href={`/companions/${id}`} className="w-full">
-        <button className="btn-primary w-full justify-center">
-          Launch Lesson
+        <button className="btn-primary w-full justify-center bg-[#D9D9DB] text-black">
+          Interact
         </button>
       </Link>
     </article>
