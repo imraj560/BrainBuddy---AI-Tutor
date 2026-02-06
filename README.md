@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🧠 BrainBuddy — AI Voice Tutor
 
-## Getting Started
+BrainBuddy is a subscription-based AI-powered learning platform that allows users to learn new topics interactively using voice commands. It integrates Vapi’s Voice AI with large language models (LLMs) to provide real-time, conversational tutoring experiences.
 
-First, run the development server:
+Authentication, payments, and subscriptions are handled through Clerk, while Supabase powers the database for storing user profiles, learning progress, and voice interaction history. The application is built with Next.js (App Router) for a modern, high-performance web experience.
 
-```bash
+✨ Features
+
+🎙️ Voice-Based AI Tutoring – Learn by speaking naturally with an AI tutor.
+
+🤖 LLM-Powered Responses – Intelligent explanations and guidance in real time.
+
+🔐 Authentication & Subscriptions – Secure login, payments, and plan management via Clerk.
+
+📊 Progress Tracking – Stores learning history and progress using Supabase.
+
+⚡ Modern Frontend – Built with Next.js App Router for performance and scalability.
+
+🛠 Tech Stack
+
+Frontend & Backend: Next.js (App Router)
+
+Voice AI: Vapi
+
+AI Models: Large Language Models (LLMs)
+
+Authentication & Payments: Clerk
+
+Database: Supabase
+
+Hosting: (Optional – Vercel / Netlify)
+
+🚀 Getting Started
+1️⃣ Clone the repository
+git clone https://github.com/imraj560/BrainBuddy---AI-Tutor.git
+cd BrainBuddy---AI-Tutor
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Configure environment variables
+
+Create a .env.local file and add the following:
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
+CLERK_SECRET_KEY=your_clerk_secret
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+VAPI_API_KEY=your_vapi_key
+LLM_API_KEY=your_llm_key
+
+
+Replace the values with your actual credentials.
+
+4️⃣ Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📖 How It Works
 
-## Learn More
+Users sign up or log in using Clerk.
 
-To learn more about Next.js, take a look at the following resources:
+After subscribing, users can start a voice session.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Voice input is processed using Vapi and sent to an LLM.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+AI generates a spoken and textual response.
 
-## Deploy on Vercel
+Learning progress and interaction history are stored in Supabase.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📂 Project Structure (Overview)
+app/
+ ├─ auth/           # Authentication routes
+ ├─ dashboard/      # User dashboard
+ ├─ api/            # Backend API routes
+ ├─ components/     # Reusable UI components
+ ├─ lib/            # Utility functions & integrations
+ └─ styles/         # Global styles
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔐 Security
+
+Secure authentication and session handling via Clerk.
+
+API keys stored using environment variables.
+
+Role-based access control for subscription-based features.
+
+📦 Deployment
