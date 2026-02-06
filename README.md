@@ -89,5 +89,3 @@ Secure authentication and session handling via Clerk.
 API keys stored using environment variables.
 
 Role-based access control for subscription-based features.
-
-📦 Deployment
